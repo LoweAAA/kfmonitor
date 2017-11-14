@@ -12,6 +12,7 @@
 		<property name="gname" column="gname"/>
 		<property name="gzone" column="gzone"/>
 		<property name="zserver" column="zserver"/>
+		<property name="port" column="port"/>
 	</class>
 	
 </hibernate-mapping>

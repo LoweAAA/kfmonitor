@@ -10,8 +10,15 @@ import java.net.UnknownHostException;
 
 public class SocketT {
 	public static void main(String[] args) throws UnknownHostException, IOException {
+		try {
 		Socket socket=new Socket();
-		SocketAddress endpoint=new InetSocketAddress("www.baidu是发发是否是.com", 80);
-		socket.connect(endpoint, 1000);
+		SocketAddress address = new InetSocketAddress("120.92.176.160",3724);
+		socket.connect(address, 1000);
+			System.out.println("success");
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("error");
+		}
+		
 	}
 }

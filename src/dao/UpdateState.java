@@ -1,6 +1,8 @@
 package dao;
 
+import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.net.SocketAddress;
 import java.util.List;
 import po.Ipstate;
 import idao.IUpdateState;
@@ -17,8 +19,11 @@ public class UpdateState implements IUpdateState {
 		for(int i=0;i<list.size();i++){
 			Ipstate ipstate=(Ipstate)list.get(i);
 			String ip=ipstate.getIp();
+			int port=ipstate.getPort();
 			try {
-				Socket socket=new Socket(ip, 80);
+				Socket socket=new Socket();
+				SocketAddress address = new InetSocketAddress(ip,port);
+				socket.connect(address, 1000);
 				ipstate.setState(1);
 				ipstateDao.setStateByIpstate(ipstate);
 				System.out.println("success");

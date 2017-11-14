@@ -25,4 +25,10 @@
   <filter-mapping>
   	<filter-name>struts2</filter-name>
   	<url-pattern>*.action</url-pattern>
-  </filter-mapping></web-app>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>update</servlet-name>
+  	<servlet-class>servlet.InitServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  </web-app>

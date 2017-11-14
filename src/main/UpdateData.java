@@ -5,7 +5,7 @@ public class UpdateData {
 		UpdateState updateState=new UpdateState();
 		while(true){
 			updateState.updateState("½£Íø3");
-			
+			Thread.sleep(3000);
 		}
 	}
 }

@@ -7,6 +7,13 @@ public class Ipstate {
 	private String gname;
 	private String gzone;
 	private String zserver;
+	private int port;
+	public int getPort() {
+		return port;
+	}
+	public void setPort(int port) {
+		this.port = port;
+	}
 	public int getIdipstate() {
 		return idipstate;
 	}
