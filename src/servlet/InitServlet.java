@@ -8,7 +8,7 @@ import dao.UpdateState;
 public class InitServlet extends HttpServlet{
 	public InitServlet() throws InterruptedException{
 		UpdateState updateState=new UpdateState();
-		Timer timer=new Timer();
-		timer.schedule(new UpdateTask(), 1000,1000*60);
+		Timer jx3timer=new Timer();
+		jx3timer.schedule(new UpdateTask("½£Íø3"), 1000,1000*3);
 	}
 }
