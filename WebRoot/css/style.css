@@ -1,0 +1,11 @@
+.header{
+	height: 360px;
+	background-color: rgb(39,174,96);
+	text-align: center;
+}
+h1{
+	font-size: 56px;
+    text-shadow: -5px 5px 0 rgba(0,0,0,.1);
+    font-family: inherit;
+    font-weight: 500;
+}
