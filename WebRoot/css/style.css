@@ -3,6 +3,7 @@
 	background-color: rgb(39,174,96);
 	text-align: center;
 	overflow: hidden;
+	background-image: url(../image/1.svg);
 }
 h1{
 	font-size: 56px;
