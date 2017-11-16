@@ -23,7 +23,7 @@ public class UpdateState implements IUpdateState {
 			try {
 				Socket socket=new Socket();
 				SocketAddress address = new InetSocketAddress(ip,port);
-				socket.connect(address, 1000);
+				socket.connect(address, 1000*10);
 				ipstate.setState(1);
 				ipstateDao.setStateByIpstate(ipstate);
 				System.out.println("success");
