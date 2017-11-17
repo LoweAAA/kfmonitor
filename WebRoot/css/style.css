@@ -14,8 +14,15 @@ h1{
     color:white;
     margin-top: 100px;
 }
+td{
+	height: 40px;
+}
 .game-search{
 	width: 680px;
 	height: 50px;
 	text-align: center;
+}
+#entity{
+	width: 956px;
+	margin:0 auto;
 }
