@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kfmonitor:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="kfmonitor.war">
+      <element id="artifact" artifact-name="kfmonitor:war exploded" />
+    </root>
+  </artifact>
+</component>

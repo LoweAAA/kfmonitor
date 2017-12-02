@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>剑网3 网游开服监控</title>
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+	<header class="header">
+		<h1>剑网3</h1>
+	</header>
+	<!-- <div id="logininfo"></div> -->
+	
+
+	
+	
+	<div id="entity">
+		<div id="top-menu">
+			<div id="zserver-search">
+				<div id="zs-title">按服务器名称查询：</div>
+				<input type="text" id="zserver-inner">
+				<button class="btn btn-primary">搜索</button>
+			</div>
+			<div id="reflesh-menu">
+				<div id="rm-title">输入自动刷新间隔时间：</div>
+				<input type="text" id="auto-reflesh-input">
+				<button class="btn btn-primary" id="auto-reflesh-button">自动刷新</button>
+			</div>
+			<div id="lasted-reflesh-time-box">
+				<div id="lr-title">最近刷新：</div>
+			<div id="lasted-reflesh-time"></div>	
+			</div>
+			
+		</div>
+		<h2>双线一区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">天鹅坪</td>
+					<td class="state"></td>
+					<td class="zserver">纵横江湖</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">步月登云</td>
+					<td class="state"></td>
+					<td class="zserver">时乘六龙</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">碧血忠魂</td>
+					<td class="state"></td>
+					<td class="zserver">攻无不克</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">君子如风</td>
+					<td class="state"></td>
+					<td class="zserver">侠肝义胆</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">破阵子</td>
+					<td class="state"></td>
+					<td class="zserver">念奴娇</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">行云流水</td>
+					<td class="state"></td>
+					<td class="zserver">穆如清风</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">鱼跃龙门</td>
+					<td class="state"></td>
+					<td class="zserver">飞鸢泛月</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">五台山</td>
+					<td class="state"></td>
+					<td class="zserver">双剑合璧</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">天下归一</td>
+					<td class="state"></td>
+					<td class="zserver">日月凌空</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">雪絮金屏</td>
+					<td class="state"></td>
+					<td class="zserver">比翼齐飞</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">鹏程万里</td>
+					<td class="state"></td>
+					<td class="zserver"></td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>双线二区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">飞龙在天</td>
+					<td class="state"></td>
+					<td class="zserver">醉舞狂歌</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">万马奔腾</td>
+					<td class="state"></td>
+					<td class="zserver">金风飒飒</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">往生涧</td>
+					<td class="state"></td>
+					<td class="zserver">龙战于野</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">君山岛</td>
+					<td class="state"></td>
+					<td class="zserver">黑云压城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">西京烟雨</td>
+					<td class="state"></td>
+					<td class="zserver">跃马扬鞭</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">银枪暮雪</td>
+					<td class="state"></td>
+					<td class="zserver">赞青春</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">楼台烟雨</td>
+					<td class="state"></td>
+					<td class="zserver">百转千回</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">叶芷青</td>
+					<td class="state"></td>
+					<td class="zserver">杨宁</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">叶孟秋</td>
+					<td class="state"></td>
+					<td class="zserver">于睿</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">僧一行</td>
+					<td class="state"></td>
+					<td class="zserver">东方宇轩</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">歃血为盟</td>
+					<td class="state"></td>
+					<td class="zserver">暴雨梨花</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">天罗地网</td>
+					<td class="state"></td>
+					<td class="zserver">点墨山河</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">情深意重</td>
+					<td class="state"></td>
+					<td class="zserver">银蛇献瑞</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">荡气回肠</td>
+					<td class="state"></td>
+					<td class="zserver">铁血丹心</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">无悔江湖</td>
+					<td class="state"></td>
+					<td class="zserver">花月别院</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">行者无疆</td>
+					<td class="state"></td>
+					<td class="zserver">李忘生</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">吕洞宾</td>
+					<td class="state"></td>
+					<td class="zserver">公孙幽</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">孟浩然</td>
+					<td class="state"></td>
+					<td class="zserver">唐简</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">七侠五义</td>
+					<td class="state"></td>
+					<td class="zserver">卧虎藏龙</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">玄正</td>
+					<td class="state"></td>
+					<td class="zserver">柳风骨</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">王维</td>
+					<td class="state"></td>
+					<td class="zserver">林白轩</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">高绛婷</td>
+					<td class="state"></td>
+					<td class="zserver">王昌龄</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">谁与争锋</td>
+					<td class="state"></td>
+					<td class="zserver">李承恩</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">谢云流</td>
+					<td class="state"></td>
+					<td class="zserver">李白</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">杜甫</td>
+					<td class="state"></td>
+					<td class="zserver">飞凤涅磐</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">登峰造极</td>
+					<td class="state"></td>
+					<td class="zserver">天长地久</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">乱世争锋</td>
+					<td class="state"></td>
+					<td class="zserver">缘定三生</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">琴瑟和鸣</td>
+					<td class="state"></td>
+					<td class="zserver">四海一家</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">风雷刀谷</td>
+					<td class="state"></td>
+					<td class="zserver">松烟竹雾</td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>电信一区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">长安城</td>
+					<td class="state"></td>
+					<td class="zserver">扬州城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">巴陵县</td>
+					<td class="state"></td>
+					<td class="zserver">南屏山</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">洛道</td>
+					<td class="state"></td>
+					<td class="zserver">洛阳城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">龙门荒漠</td>
+					<td class="state"></td>
+					<td class="zserver">萍踪侠影</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">独步天下</td>
+					<td class="state"></td>
+
+					<td class="zserver">龙争虎斗</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">幽雨坪</td>
+					<td class="state"></td>
+					<td class="zserver">枫华谷</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">逍遥林</td>
+					<td class="state"></td>
+					<td class="zserver">翠烟山</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">义薄云天</td>
+					<td class="state"></td>
+					<td class="zserver">晴昼海</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">昆仑</td>
+					<td class="state"></td>
+					<td class="zserver">金水镇</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">海誓山盟</td>
+					<td class="state"></td>
+					<td class="zserver">神龙摆尾</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">夜幕星河</td>
+					<td class="state"></td>
+					<td class="zserver">白帝城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">三才阵</td>
+					<td class="state"></td>
+					<td class="zserver">无盐岛</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">紫微山</td>
+					<td class="state"></td>
+					<td class="zserver">英雄擂</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">演武场</td>
+					<td class="state"></td>
+					<td class="zserver">侠骨丹心</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">肝胆相照</td>
+					<td class="state"></td>
+					<td class="zserver">浮光掠影</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">枫林如火</td>
+					<td class="state"></td>
+					<td class="zserver">逍遥游</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">壮志凌云</td>
+					<td class="state"></td>
+					<td class="zserver">风花雪月</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">荻花宫</td>
+					<td class="state"></td>
+					<td class="zserver">步莲台</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">天子峰</td>
+					<td class="state"></td>
+					<td class="zserver">落星湖</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">傲视天地</td>
+					<td class="state"></td>
+					<td class="zserver">空雾峰</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">天工坊</td>
+					<td class="state"></td>
+					<td class="zserver">灵霄峡</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">日轮山城</td>
+					<td class="state"></td>
+					<td class="zserver">云湖天池</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">上陵苑</td>
+					<td class="state"></td>
+					<td class="zserver">追风蹑景</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">华清池</td>
+					<td class="state"></td>
+					<td class="zserver">群英汇</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">相知莫问</td>
+					<td class="state"></td>
+					<td class="zserver">金蛇漫舞</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">忆盈楼</td>
+					<td class="state"></td>
+					<td class="zserver">落雁峰</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">青萝山</td>
+					<td class="state"></td>
+					<td class="zserver">无极道场</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">三星望月</td>
+					<td class="state"></td>
+					<td class="zserver">飞星遁影</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">忆青春</td>
+					<td class="state"></td>
+					<td class="zserver">微山书院</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">秦王殿</td>
+					<td class="state"></td>
+					<td class="zserver">天王殿</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">大雄宝殿</td>
+					<td class="state"></td>
+					<td class="zserver">敬德楼</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">战魂劫</td>
+					<td class="state"></td>
+					<td class="zserver">太极广场</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">纯阳宫</td>
+					<td class="state"></td>
+					<td class="zserver">达摩院</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">凌烟阁</td>
+					<td class="state"></td>
+					<td class="zserver">血龙出渊</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">鹤舞九霄</td>
+					<td class="state"></td>
+					<td class="zserver">双狼之战</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">出神入化</td>
+					<td class="state"></td>
+					<td class="zserver">比翼双飞</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">秀明尘身</td>
+					<td class="state"></td>
+					<td class="zserver">蝶恋花</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">叱咤风云</td>
+					<td class="state"></td>
+					<td class="zserver">策马江湖</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">厉兵秣马</td>
+					<td class="state"></td>
+					<td class="zserver">初心不泯</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">日月明尊</td>
+					<td class="state"></td>
+					<td class="zserver">饮马川</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">午阳岗</td>
+					<td class="state"></td>
+					<td class="zserver">藏经阁</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">轩辕台</td>
+					<td class="state"></td>
+					<td class="zserver">知节殿</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">战江湖</td>
+					<td class="state"></td>
+					<td class="zserver">飞骏谷</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">燕子坞</td>
+					<td class="state"></td>
+					<td class="zserver">思过崖</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">论剑峰</td>
+					<td class="state"></td>
+					<td class="zserver">少室山</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">千机阁</td>
+					<td class="state"></td>
+					<td class="zserver">虎牢关</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">六祖台</td>
+					<td class="state"></td>
+					<td class="zserver">惊鸿游龙</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">龙腾虎跃</td>
+					<td class="state"></td>
+					<td class="zserver">潜龙勿用</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">登萍渡水</td>
+					<td class="state"></td>
+					<td class="zserver">山河齐颂</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">沁园春</td>
+					<td class="state"></td>
+					<td class="zserver">红尘寻梦</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">天佑中华</td>
+					<td class="state"></td>
+					<td class="zserver">烈日斩</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">国色天香</td>
+					<td class="state"></td>
+					<td class="zserver">倾国倾城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">英雄结义</td>
+					<td class="state"></td>
+					<td class="zserver">天女散花</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">鹰击长空</td>
+					<td class="state"></td>
+					<td class="zserver">众志成城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">气吞山河</td>
+					<td class="state"></td>
+					<td class="zserver">天马行空</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">名动江湖</td>
+					<td class="state"></td>
+					<td class="zserver">剑指龙城</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">春和景明</td>
+					<td class="state"></td>
+					<td class="zserver">大圣归来</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">名扬四海</td>
+					<td class="state"></td>
+					<td class="zserver">情深似海</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">雪月天枪</td>
+					<td class="state"></td>
+					<td class="zserver">乱世长安</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">恋青春</td>
+					<td class="state"></td>
+					<td class="zserver">光明顶</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">圣火令</td>
+					<td class="state"></td>
+					<td class="zserver">不归海</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">快意恩仇</td>
+					<td class="state"></td>
+					<td class="zserver">破茧成蝶</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">仙侣庭园</td>
+					<td class="state"></td>
+					<td class="zserver">一苇渡江</td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>电信五区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">剑胆琴心</td>
+					<td class="state"></td>
+					<td class="zserver">幽月轮</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">圣墓山</td>
+					<td class="state"></td>
+					<td class="zserver">笑傲江湖</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">山雨欲来</td>
+					<td class="state"></td>
+					<td class="zserver">金榜题名</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">千岛湖</td>
+					<td class="state"></td>
+					<td class="zserver">平步青云</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">乾坤一掷</td>
+					<td class="state"></td>
+					<td class="zserver">华山论剑</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">斗转星移</td>
+					<td class="state"></td>
+					<td class="zserver">金戈铁马</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">风雨同舟</td>
+					<td class="state"></td>
+					<td class="zserver">唯我独尊</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">满江红</td>
+					<td class="state"></td>
+					<td class="zserver">侠客行</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">梦江南</td>
+					<td class="state"></td>
+					<td class="zserver">如梦令</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">枫泾古镇</td>
+					<td class="state"></td>
+					<td class="zserver"></td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>电信八区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">绝代天骄</td>
+					<td class="state"></td>
+					<td class="zserver">风骨霸刀</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">梦回大唐</td>
+					<td class="state"></td>
+					<td class="zserver">龙飞凤舞</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">武林同庆</td>
+					<td class="state"></td>
+					<td class="zserver">亢龙有悔</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">大明宫</td>
+					<td class="state"></td>
+					<td class="zserver">双龙取水</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">见龙在田</td>
+					<td class="state"></td>
+					<td class="zserver">星河清梦</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">战无不胜</td>
+					<td class="state"></td>
+					<td class="zserver">致青春</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">侠骨柔情</td>
+					<td class="state"></td>
+					<td class="zserver">引仙水榭</td>
+					<td class="state"></td>
+				</tr>
+				<tr>
+					<td class="zserver">暗香掠影</td>
+					<td class="state"></td>
+					<td class="zserver">百家争鸣</td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>双线PVP搞事区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247"></th>
+					<th width="230"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">止戈为武</td>
+					<td class="state"></td>
+					<td class="zserver"></td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>电信PVP搞事区</h2>
+		<table class="table table-striped ">
+			<thead>
+				<tr>
+					<th width="247">服务器名</th>
+					<th width="230">服务器状态</th>
+					<th width="247"></th>
+					<th width="230"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="zserver">百无禁忌</td>
+					<td class="state"></td>
+					<td class="zserver"></td>
+					<td class="state"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/jx3.js"></script>
+</body>
+</html>
